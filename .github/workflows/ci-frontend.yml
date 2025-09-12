@@ -1,47 +1,32 @@
-# Nome do Workflow que aparecerá na aba "Actions"
+# .github/workflows/frontend-ci.yml
+
 name: CI - Testes do Front-end
 
-# Gatilhos: Define quando este workflow deve rodar
 on:
-  # Roda em todo 'push' para a branch 'main'
   push:
     branches: [ main ]
-  # Roda em toda abertura ou atualização de um Pull Request para a branch 'main'
   pull_request:
     branches: [ main ]
 
-# Tarefas: Define o que o workflow fará
 jobs:
-  # Nome da tarefa
   build-and-test:
-    # Máquina virtual que será usada para rodar a tarefa
     runs-on: ubuntu-latest
-
-    # IMPORTANTE: Define o diretório de trabalho padrão para a pasta /frontend
-    # Todos os comandos 'run' serão executados dentro desta pasta.
     defaults:
       run:
         working-directory: ./frontend
-
-    # Passos que a tarefa executará em sequência
     steps:
-      # 1. Clona o seu repositório para a máquina virtual
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      # 2. Configura a versão do Node.js que será usada
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x' # Use a versão do Node.js do seu projeto
+          node-version: '18.x'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
-      # 3. Instala as dependências do projeto (npm install)
       - name: Instala as dependências
         run: npm install
 
-      # 4. Roda os testes
-      # O comando 'npm test' será executado dentro da pasta /frontend
       - name: Roda os testes
         run: npm test -- --watchAll=false
