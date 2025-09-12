@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Disciplina - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <script src="js/transitions.js" defer></script>
+</head>
+<body class="home-body">
+    <!-- Cabeçalho Principal com Navegação -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/imagelogo.png" alt="Logotipo do Sistema de Apoio a Alunos">
+        </div>
+        <nav class="button-group">
+            <a href="home.html" class="nav-btn">Minhas Tarefas</a>
+            <a href="disciplinas.html" class="nav-btn active">Minhas Disciplinas</a>
+            <a href="index.html" class="nav-btn">Sair</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="home-main">
+        <h1>Olá, usuário!</h1>
+
+        <form class="disciplina-form" action="disciplinas-lista.html">
+            <div class="form-group">
+                <label for="disciplina-nome">Nome da Disciplina</label>
+                <input type="text" id="disciplina-nome" placeholder="Digite aqui">
+            </div>
+            <div class="form-group">
+                <label for="professor-nome">Nome do Professor</label>
+                <input type="text" id="professor-nome" placeholder="Digite aqui">
+            </div>
+            <button type="submit" class="btn-login">Adicionar Disciplina</button>
+        </form>
+    </main>
+
+    <!-- Ilustração Decorativa -->
+    <img src="assets/image7.png" alt="Ilustração de estudantes com lápis e livros" class="home-illustration">
+
+    <script src="js/main.js"></script>
+</body>
+</html>
