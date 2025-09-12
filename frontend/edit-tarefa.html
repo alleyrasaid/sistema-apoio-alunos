@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefa - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="home-body">
+    <!-- Cabeçalho Principal com Navegação -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/imagelogo.png" alt="Logotipo do Sistema de Apoio a Alunos">
+        </div>
+        <nav class="button-group">
+            <a href="tarefas.html" class="nav-btn active">Minhas Tarefas</a>
+            <a href="disciplinas-lista.html" class="nav-btn">Minhas Disciplinas</a>
+            <a href="index.html" class="nav-btn">Sair</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="home-main">
+        <h1>Olá, usuário!</h1>
+
+        <form class="disciplina-form" action="tarefas-pendente.html">
+            <div class="form-group">
+                <label for="tarefa-titulo">Título da Tarefa (Obrigatório)</label>
+                <input type="text" id="tarefa-titulo" value="Entregar documentação de Escopo" required>
+            </div>
+            <div class="form-group">
+                <label for="tarefa-disciplina">Disciplina</label>
+                <select id="tarefa-disciplina" required>
+                    <option value="eng-software" selected>Engenharia de Software II</option>
+                    <option value="bd">Banco de Dados</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tarefa-data">Data de Entrega</label>
+                <input type="date" id="tarefa-data" value="2025-09-21" required>
+            </div>
+            <button type="submit" class="btn-login">Salvar Alterações</button>
+        </form>
+    </main>
+
+    <!-- Ilustração Decorativa -->
+    <img src="assets/image5.png" alt="Ilustração de estudantes e material escolar" class="home-illustration">
+
+</body>
+</html>

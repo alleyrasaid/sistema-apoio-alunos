@@ -1,5 +1,5 @@
 /* Importando fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;700&display=swap');
 
 /*
   Especificações de Design:
@@ -43,6 +43,15 @@ body {
     background-color: #fff;
     height: 100vh;
     overflow: hidden; /* Evita scroll na página principal */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+}
+
+/* Força a herança da fonte em elementos de formulário que não herdam por padrão */
+input, button, select, textarea {
+    font-family: inherit;
 }
 
 .container {
@@ -104,6 +113,26 @@ body {
     margin-bottom: 2rem;
 }
 
+.form-field label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-field {
+    margin-bottom: 24px; /* Aumenta o espaço entre os campos */
+}
+
+.form-field input {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 1rem;
+    font-size: 14px;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -114,7 +143,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.form-group input, .password-wrapper {
+.form-group input, .password-wrapper, .form-group select {
     width: 100%;
     background-color: var(--input-bg);
     border: 1px solid var(--input-bg);
@@ -122,6 +151,15 @@ body {
     height: 45px; /* Altura ajustada para 29px + padding */
     padding: 0 1rem;
     font-size: 14px;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
 }
 
 .password-wrapper {
@@ -177,6 +215,24 @@ body {
 }
 
 .btn-login:hover {
+    background-color: #5258d8;
+}
+
+.btn-action {
+    background-color: var(--purple-bg);
+    color: var(--white-text);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.btn-action:hover {
     background-color: #5258d8;
 }
 
@@ -262,6 +318,312 @@ body {
     font-size: 14px;
 }
 
+/* --- Estilos da Página Inicial (Home) --- */
+.home-body {
+    background-color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    background-color: var(--purple-bg);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.nav-btn {
+    font-family: var(--font-title);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.nav-btn.active {
+    background-color: var(--white-text);
+    color: var(--purple-bg);
+    border-radius: 4px;
+}
+
+.nav-btn:not(.active) {
+    background-color: transparent;
+    color: var(--white-text);
+}
+
+.nav-btn:active {
+    text-decoration: none;
+}
+
+.home-main {
+    padding: 2rem 4rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-main h1 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.disciplina-form {
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #DEE1E6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-title {
+    background-color: var(--purple-bg);
+    color: var(--white-text);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.disciplinas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.disciplinas-table th, .disciplinas-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #DEE1E6;
+    vertical-align: middle;
+}
+
+.tarefas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tarefas-table th, .tarefas-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #DEE1E6;
+    vertical-align: middle;
+}
+
+.tarefas-table thead th {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6C727F;
+}
+
+.tarefas-table thead th i {
+    color: var(--purple-bg);
+}
+
+.tarefas-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.task-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.disciplinas-table thead th {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6C727F;
+}
+
+.disciplinas-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.professor-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subject-icon {
+    color: var(--purple-bg);
+    font-size: 20px; /* Ajuste o tamanho conforme necessário */
+    width: 24px;
+    text-align: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #6C727F;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: var(--purple-bg);
+}
+
+.alerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px; /* Limita a largura dos alertas */
+}
+
+.alert-box {
+    background-color: #DEE1E6;
+    color: var(--primary-text);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-body);
+    font-size: 14px;
+}
+
+.alert-box svg {
+    color: #424856; /* Cor do ícone */
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+.home-illustration {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 400px; /* Ajuste o tamanho conforme necessário */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo se houver sobreposição */
+}
+
+.home-illustration-left {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    width: 400px;
+    z-index: -1;
+}
+
+/* --- Animação de Fade Out --- */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+/* --- Estilos do Modal --- */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.modal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.modal-visible .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.modal-content h2 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- Estilos para mensagens de erro --- */
+.form-field .error-message {
+    color: #D92D20; /* Cor vermelha para erros */
+    font-size: 0.875rem; /* 14px */
+    margin-top: 4px;
+}
+
+.form-field .input-error {
+    border-color: #D92D20; /* Borda vermelha para campos com erro */
+    background-color: #FEF3F2; /* Fundo levemente avermelhado */
+}
+
 /* --- Responsividade --- */
 @media (max-width: 992px) {
     .container {
@@ -279,6 +641,31 @@ body {
     .login-main {
         justify-content: flex-start;
         margin-top: 2rem;
+    }
+
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .home-illustration {
+        display: none; /* Oculta a ilustração em telas menores */
+    }
+
+    .home-illustration-left {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        text-align: center;
     }
 }
 
