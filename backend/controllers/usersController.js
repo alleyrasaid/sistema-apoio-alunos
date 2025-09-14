@@ -1,6 +1,5 @@
 const admin = require('firebase-admin');
 
-// Função para CADASTRAR um novo usuário
 exports.signup = async (req, res) => {
   try {
     const { email, password, nome } = req.body;

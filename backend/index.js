@@ -18,6 +18,7 @@ admin.initializeApp({
 
 const usersRouter = require('./routes/users.js');
 const disciplinasRouter = require('./routes/disciplinas.js');
+const tarefasRouter = require('./routes/tarefas.js');
 
 app.get('/', (req, res) => {
   res.send('API do Sistema de Apoio ao Aluno no ar! Sabadão produtivo!');
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', usersRouter);
 app.use('/disciplinas', disciplinasRouter);
+app.use('/tarefas', tarefasRouter);
 
 
 

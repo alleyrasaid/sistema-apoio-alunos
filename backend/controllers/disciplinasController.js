@@ -32,7 +32,6 @@ exports.getDisciplinasDoUsuario = async (req, res) => {
   try {
     const userId = req.user.uid;
 
-    // Nota: Adicionei um .orderBy('nome') para que a lista venha sempre em ordem alfabética!
     const snapshot = await db.collection('disciplinas').where('userId', '==', userId).orderBy('nome').get();
 
     if (snapshot.empty) {
@@ -79,8 +78,6 @@ exports.updateDisciplina = async (req, res) => {
   }
 };
 
-
-// Função para DELETAR uma disciplina
 exports.deleteDisciplina = async (req, res) => {
   try {
     const userId = req.user.uid;
