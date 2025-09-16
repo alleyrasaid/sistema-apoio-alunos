@@ -22,7 +22,7 @@
 
             <main class="login-main">
                 <h1>Login</h1>
-                <form action="home.html">
+                <form id="login-form">
                     <div class="form-group">
                         <label for="email">Usuário ou email</label>
                         <input type="email" id="email" placeholder="exemplo.email@gmail.com">
@@ -44,8 +44,7 @@
                 <div class="social-login">
                     <p>Ou logue por estas opções:</p>
                     <div class="social-buttons">
-                        <!-- Botão Google com SVG -->
-                        <button class="social-btn google">
+                        <button id="google-login-btn" class="social-btn google">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.999 8.18182C15.999 7.63636 15.9536 7.09091 15.8627 6.54545H8.18091V9.45455H12.6236C12.4427 10.3636 11.8855 11.2727 11.0173 11.8182V13.7273H13.4355C14.9809 12.3636 15.999 10.4545 15.999 8.18182Z" fill="#C71610"/>
                                 <path d="M8.18182 16C10.6 16 12.6273 15.1818 13.4364 13.7273L11.0182 11.8182C10.2091 12.3636 9.2 12.7273 8.18182 12.7273C6.22727 12.7273 4.59091 11.4545 3.99091 9.72727H1.48182V11.6364C2.38182 14.0909 5.04545 16 8.18182 16Z" fill="#C71610"/>
@@ -54,11 +53,6 @@
                                 </svg>
                         </button>
                         <!-- Botão Facebook com SVG -->
-                        <button class="social-btn facebook">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8.00001C16 3.58168 12.4184 0 8 0C3.5816 0 0 3.58168 0 8.00001C0 11.9916 2.92552 15.2161 6.75 15.88V10.25H4.71875V8.00001H6.75V6.26751C6.75 4.28326 7.94336 3.25 9.77109 3.25C10.6477 3.25 11.5625 3.40626 11.5625 3.40626V5.28126H10.5539C9.58047 5.28126 9.25 5.86016 9.25 6.50864V8.00001H11.4688L11.1148 10.25H9.25V15.88C13.0745 15.2161 16 11.9916 16 8.00001Z" fill="#335CA6"/>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </main>
@@ -75,8 +69,22 @@
             </div>
         </div>
     </div>
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <script type="module">
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyAyN-BwYsEV6ItieMg8b_CLrcSPgDhfW9I",
+        authDomain: "sistema-de-apoio-a-alunos.firebaseapp.com",
+        projectId: "sistema-de-apoio-a-alunos",
+        storageBucket: "sistema-de-apoio-a-alunos.firebasestorage.app",
+        messagingSenderId: "87957535973",
+        appId: "1:87957535973:web:bcbb210d2f41c68234e80c",
+        measurementId: "G-8FEZGLTDVS"
+        };
+
+        window.firebaseConfig = firebaseConfig;
+    </script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>

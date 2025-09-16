@@ -8,8 +8,12 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 router.use(authMiddleware);
 
+router.get('/:id', tarefasController.getTarefaById);
+
 router.put('/:id', tarefasController.updateTarefa);
 
 router.delete('/:id', tarefasController.deleteTarefa);
+
+router.get('/', tarefasController.getAllTarefasDoUsuario);
 
 module.exports = router;

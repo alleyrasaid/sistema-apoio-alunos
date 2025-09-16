@@ -456,7 +456,7 @@ input, button, select, textarea {
 
 .task-actions {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
 .task-checkbox {
@@ -679,4 +679,16 @@ input, button, select, textarea {
         gap: 1rem;
         margin-bottom: 2rem;
     }
+}
+
+.actions-cell {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    vertical-align: middle;
+    
+}
+
+.tarefas-table tbody td {
+    vertical-align: middle;
 }

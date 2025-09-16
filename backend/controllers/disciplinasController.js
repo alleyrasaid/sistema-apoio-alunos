@@ -102,3 +102,28 @@ exports.deleteDisciplina = async (req, res) => {
     res.status(500).json({ message: 'Ocorreu um erro interno no servidor.' });
   }
 };
+
+exports.getDisciplinaById = async (req, res) => {
+  try {
+    const userId = req.user.uid;
+    const disciplinaId = req.params.id;
+
+    const disciplinaRef = db.collection('disciplinas').doc(disciplinaId);
+    const doc = await disciplinaRef.get();
+
+    // VERIFICAÇÃO DE SEGURANÇA
+    if (!doc.exists) {
+      return res.status(404).json({ message: 'Disciplina não encontrada.' });
+    }
+    if (doc.data().userId !== userId) {
+      return res.status(403).json({ message: 'Acesso negado a esta disciplina.' });
+    }
+
+    // Se passou na segurança, retorna os dados da disciplina
+    res.status(200).json({ id: doc.id, ...doc.data() });
+
+  } catch (error) {
+    console.error('Erro ao buscar disciplina:', error);
+    res.status(500).json({ message: 'Ocorreu um erro interno no servidor.' });
+  }
+};

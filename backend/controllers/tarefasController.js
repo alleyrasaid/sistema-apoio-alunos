@@ -73,6 +73,23 @@ exports.getTarefasDaDisciplina = async (req, res) => {
   }
 };
 
+exports.getTarefaById = async (req, res) => {
+  try {
+    const userId = req.user.uid;
+    const tarefaId = req.params.id;
+    const tarefaRef = db.collection('tarefas').doc(tarefaId);
+    const doc = await tarefaRef.get();
+
+    if (!doc.exists || doc.data().userId !== userId) {
+      return res.status(403).json({ message: 'Acesso negado a esta tarefa.' });
+    }
+    res.status(200).json({ id: doc.id, ...doc.data() });
+  } catch (error) {
+    console.error('Erro ao buscar tarefa:', error);
+    res.status(500).json({ message: 'Ocorreu um erro interno.' });
+  }
+};
+
 exports.updateTarefa = async (req, res) => {
   try {
     const userId = req.user.uid;
@@ -119,5 +136,25 @@ exports.deleteTarefa = async (req, res) => {
   } catch (error) {
     console.error('Erro ao deletar tarefa:', error);
     res.status(500).json({ message: 'Ocorreu um erro interno no servidor.' });
+  }
+};
+
+exports.getAllTarefasDoUsuario = async (req, res) => {
+  try {
+    const userId = req.user.uid;
+    const snapshot = await db.collection('tarefas')
+      .where('userId', '==', userId)
+      .orderBy('dataEntrega', 'asc') // Ordena por data de entrega
+      .get();
+
+    const tarefas = [];
+    snapshot.forEach(doc => {
+      tarefas.push({ id: doc.id, ...doc.data() });
+    });
+
+    res.status(200).json(tarefas);
+  } catch (error) {
+    console.error('Erro ao buscar todas as tarefas:', error);
+    res.status(500).json({ message: 'Ocorreu um erro interno.' });
   }
 };

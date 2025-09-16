@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF--8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta - Sistema de Apoio a Alunos</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/transitions.css">
-    <script src="js/transitions.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <!-- Coluna Esquerda: Conteúdo do Cadastro -->
         <div class="login-section">
             <header class="login-header">
                 <div class="logo">
@@ -23,80 +21,36 @@
 
             <main class="login-main">
                 <h1>Criar Conta</h1>
-                <form action="home.html">
+                <form id="signup-form">
                     <div class="form-field">
                         <label for="username">Usuário</label>
-                        <input type="text" id="username" placeholder="Digite seu nome de usuário">
+                        <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
                     </div>
                     <div class="form-field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="exemplo.email@gmail.com">
+                        <input type="email" id="email" placeholder="exemplo.email@gmail.com" required>
                     </div>
                     <div class="form-field">
                         <label for="password">Senha</label>
                         <div class="password-wrapper">
-                            <input type="password" id="password" placeholder="digite 8 ou mais caracteres">
-                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                            </svg>
+                            <input type="password" id="password" placeholder="digite 8 ou mais caracteres" required>
                         </div>
                     </div>
                     <div class="form-field">
                         <label for="confirm-password">Confirmar senha</label>
                         <div class="password-wrapper">
-                            <input type="password" id="confirm-password" placeholder="digite 8 ou mais caracteres">
-                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                            </svg>
+                            <input type="password" id="confirm-password" placeholder="digite 8 ou mais caracteres" required>
                         </div>
                     </div>
                     <button type="submit" class="btn-login">Cadastrar</button>
                 </form>
-
-                <div class="social-login">
-                    <p>Ou cadastre por estas opções:</p>
-                    <div class="social-buttons">
-                        <button class="social-btn google">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.999 8.18182C15.999 7.63636 15.9536 7.09091 15.8627 6.54545H8.18091V9.45455H12.6236C12.4427 10.3636 11.8855 11.2727 11.0173 11.8182V13.7273H13.4355C14.9809 12.3636 15.999 10.4545 15.999 8.18182Z" fill="#C71610"/>
-                                <path d="M8.18182 16C10.6 16 12.6273 15.1818 13.4364 13.7273L11.0182 11.8182C10.2091 12.3636 9.2 12.7273 8.18182 12.7273C6.22727 12.7273 4.59091 11.4545 3.99091 9.72727H1.48182V11.6364C2.38182 14.0909 5.04545 16 8.18182 16Z" fill="#C71610"/>
-                                <path d="M3.99091 9.72727C3.80909 9.18182 3.71818 8.63636 3.71818 8C3.71818 7.36364 3.80909 6.81818 3.99091 6.27273V4.36364H1.48182C0.536364 6.09091 0 8 0 8C0 8 0.536364 9.90909 1.48182 11.6364L3.99091 9.72727Z" fill="#C71610"/>
-                                <path d="M8.18182 3.27273C9.44545 3.27273 10.4545 3.72727 11.0182 4.27273L13.4818 1.81818C12.6273 0.909091 10.6 0 8.18182 0C5.04545 0 2.38182 1.90909 1.48182 4.36364L3.99091 6.27273C4.59091 4.54545 6.22727 3.27273 8.18182 3.27273Z" fill="#C71610"/>
-                                </svg>
-                        </button>
-                        <button class="social-btn facebook">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8.00001C16 3.58168 12.4184 0 8 0C3.5816 0 0 3.58168 0 8.00001C0 11.9916 2.92552 15.2161 6.75 15.88V10.25H4.71875V8.00001H6.75V6.26751C6.75 4.28326 7.94336 3.25 9.77109 3.25C10.6477 3.25 11.5625 3.40626 11.5625 3.40626V5.28126H10.5539C9.58047 5.28126 9.25 5.86016 9.25 6.50864V8.00001H11.4688L11.1148 10.25H9.25V15.88C13.0745 15.2161 16 11.9916 16 8.00001Z" fill="#335CA6"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </main>
+                </main>
         </div>
-
-        <!-- Coluna Direita: Ilustração e Citação -->
         <div class="illustration-section">
-            <div class="illustration-content">
-                <img src="assets/image2.png" alt="Ilustração de estudantes e material escolar">
-                <blockquote>
-                    <p>"Educar é semear com sabedoria e colher com paciência."</p>
-                    <footer>Augusto Cury</footer>
-                </blockquote>
             </div>
-        </div>
     </div>
-    <script src="js/main.js"></script>
-</body>
-</html>
-    </div>
-    <script src="js/main.js"></script>
-</body>
-</html>
-            </div>
-        </div>
-    </div>
-    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 </html>

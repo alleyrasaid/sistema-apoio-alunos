@@ -14,5 +14,6 @@ router.delete('/:id', disciplinasController.deleteDisciplina);
 
 router.post('/:disciplinaId/tarefas', tarefasController.createTarefa);
 router.get('/:disciplinaId/tarefas', tarefasController.getTarefasDaDisciplina);
+router.get('/:id', disciplinasController.getDisciplinaById);
 
 module.exports = router;

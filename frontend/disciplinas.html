@@ -5,42 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas Disciplinas - Sistema de Apoio a Alunos</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="home-body">
-    <!-- Cabeçalho Principal com Navegação -->
-    <header class="main-header">
-        <div class="logo">
-            <img src="assets/imagelogo.png" alt="Logotipo do Sistema de Apoio a Alunos">
-        </div>
-        <nav class="button-group">
-            <a href="home.html" class="nav-btn">Minhas Tarefas</a>
-            <a href="#" class="nav-btn active">Minhas Disciplinas</a>
-            <a href="index.html" class="nav-btn">Sair</a>
-        </nav>
-    </header>
+    
+    <div id="header-placeholder"></div>
 
-    <!-- Conteúdo Principal da Página -->
     <main class="home-main">
-        <h1>Olá, usuário!</h1>
+        <h1 id="user-greeting">Minhas Disciplinas</h1>
 
-        <div class="alerts-container">
+        <div class="table-container">
+            <div class="table-title">Disciplinas</div>
+            <table class="disciplinas-table">
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-disciplinas-tbody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div id="alerts-container" class="alerts-container" style="display: none;">
             <div class="alert-box">
-                <!-- Ícone de Alerta SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#424856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-                <p>Você não possui disciplinas cadastradas</p>
+                <p>Você não possui disciplinas cadastradas. Que tal adicionar uma?</p>
             </div>
         </div>
 
         <a href="add-disciplina.html" class="btn-action">+ Adicionar Nova Disciplina</a>
     </main>
 
-    <!-- Ilustração Decorativa -->
-    <img src="assets/image5.png" alt="Ilustração de estudantes e material escolar" class="home-illustration">
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/disciplinas.js"></script>
+    <script>
+        renderHeader('disciplinas'); 
+    </script>
 </body>
 </html>
