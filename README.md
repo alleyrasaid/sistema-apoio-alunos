@@ -13,6 +13,7 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 | 2023031825     | Aryella Dias         |  |  
 | 2016005763     | Harley Milhomes      |   |  
 | 2020004584     | João Pedro Saraiva   |       | 
+|  2021012301    |  Marília Santos      |    |    
 ## 3. Tecnologias Utilizadas  
 - **Linguagens**:   
 - **Frameworks**:   
