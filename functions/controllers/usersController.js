@@ -32,3 +32,20 @@ exports.signup = async (req, res) => {
     res.status(500).json({ message: 'Ocorreu um erro no servidor.' });
   }
 };
+
+exports.syncUserProfile = async (req, res) => {
+  try {
+    const { uid, name, email } = req.user; 
+    const userRef = admin.firestore().collection('users').doc(uid);
+
+    await userRef.set({
+      nome: name,
+      email: email
+    }, { merge: true });
+
+    res.status(200).json({ message: 'Perfil do usuário sincronizado com sucesso.' });
+  } catch (error) {
+    console.error("Erro ao sincronizar perfil:", error);
+    res.status(500).json({ message: 'Erro ao sincronizar perfil do usuário.' });
+  }
+};

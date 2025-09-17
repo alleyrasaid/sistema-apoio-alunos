@@ -32,7 +32,7 @@ signupForm.addEventListener('submit', async (event) => {
     };
 
     try {
-        const response = await axios.post('http://localhost:3000/users/signup', userData);
+        const response = await axios.post('/api/users/signup', userData);
 
 
         alert("Conta criada com sucesso! Você será redirecionado para a página de login.");

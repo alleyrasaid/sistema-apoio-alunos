@@ -1,5 +1,3 @@
-// js/add-disciplina.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('authToken');
     const addDisciplinaForm = document.getElementById('add-disciplina-form');
@@ -20,10 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const apiClient = axios.create({
-        baseURL: 'http://localhost:3000',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        }
+        baseURL: '/api', 
+        headers: { 'Authorization': `Bearer ${token}` }
     });
 
     addDisciplinaForm.addEventListener('submit', async (event) => {

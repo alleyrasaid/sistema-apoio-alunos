@@ -3,7 +3,6 @@ function getUserInfo() {
     if (!token) return null;
 
     try {
-        // Pega a parte do meio do token (payload), decodifica de Base64 e transforma em objeto
         const payload = JSON.parse(atob(token.split('.')[1]));
         return { nome: payload.name, uid: payload.user_id };
     } catch (error) {

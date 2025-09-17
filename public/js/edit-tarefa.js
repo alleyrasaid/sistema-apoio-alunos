@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!tarefaId) { window.location.href = 'disciplinas.html'; return; }
 
     const apiClient = axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: '/api', 
         headers: { 'Authorization': `Bearer ${token}` }
     });
 

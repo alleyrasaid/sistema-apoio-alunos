@@ -1,5 +1,3 @@
-// js/add-tarefa.js
-
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('authToken');
     const addTarefaForm = document.getElementById('add-tarefa-form');
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- 3. CONFIGURAÇÃO DO AXIOS ---
     const apiClient = axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: '/api', 
         headers: { 'Authorization': `Bearer ${token}` }
     });
 

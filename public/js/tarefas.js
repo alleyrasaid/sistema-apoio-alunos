@@ -25,7 +25,7 @@
 
     // --- 2. CONFIGURAÇÃO DO AXIOS ---
     const apiClient = axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: '/api', 
         headers: { 'Authorization': `Bearer ${token}` }
     });
 

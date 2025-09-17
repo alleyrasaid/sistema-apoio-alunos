@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const apiClient = axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: '/api', 
         headers: { 'Authorization': `Bearer ${token}` }
     });
 
