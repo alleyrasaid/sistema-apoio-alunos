@@ -1,31 +1,22 @@
-name: ? Testes Unitários
+name: Unit Tests
 
 on:
   push:
-    branches: ['**']
+    branches: [main]
   pull_request:
-    branches: ['**']
+    branches: [main]
 
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
-    name: ?? Rodar Testes Unitários
+    name: Run Unit Tests
 
     steps:
-    - name: ?? Baixar código
-      uses: actions/checkout@v4
-
-    - name: ?? Instalar Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v3
       with:
         node-version: '18.x'
         cache: 'npm'
-
-    - name: ?? Instalar dependências
-      run: npm ci
-
-    - name: ?? Executar testes unitários
-      run: npm run test:run
-
-    - name: ?? Gerar coverage report
-      run: npm run coverage
+    - run: npm ci
+    - run: npm run test:run
+    - run: npm run coverage
