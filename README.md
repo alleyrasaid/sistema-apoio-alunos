@@ -103,6 +103,6 @@ sistema-apoio-alunos/
 8. Documentação
 Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
 
-Diagramas UML: Link para pasta de documentação
+Diagramas UML: https://github.com/alleyrasaid/sistema-apoio-alunos/tree/main/docs/Diagramas
 
 
