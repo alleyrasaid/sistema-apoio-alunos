@@ -3,7 +3,7 @@
 
 ## 1. Descrição  
 O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização acadêmica, permitindo o gerenciamento de disciplinas, tarefas e prazos.  
-**Problema resolvido**: Auxilia estudantes na gestão do tempo e reduz o esquecimento de compromissos acadêmicos através de lembretes e interface intuitiva.  
+**Problema resolvido**: Auxilia estudantes na gestão do tempo e reduz o esquecimento de compromissos acadêmicos através de uma interface intuitiva.  
 
 ## 2. Equipe  
 | Matrícula      | Nome                 | Função               |  
@@ -13,72 +13,114 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 | 2023031825     | Aryella Dias         |  |  
 | 2016005763     | Harley Milhomes      |   |  
 | 2020004584     | João Pedro Saraiva   |       | 
+| 2023007113     | Saymon Miranda | Front-end Developer  |  
+| 2020004584     | João Pedro Saraiva   | Back End Developer   | 
+| 2023031825     | Aryella Dias         | Tester e Gestão de Tarefas |  
+| 2016005763     | Marilia Santos       | Gestao de Tarefas |  
+| 2023031816     | Adriana Sawaki       | Tester e Gestão de Tarefas |
+
 ## 3. Tecnologias Utilizadas  
 - **Linguagens**:   
-- **Frameworks**:   
-- **Banco de Dados**:   
-- **Ferramentas**: GitHub  
+- ***Front End**: | HTML, CSS, Vanilla |
+- **Back End**: | Firebase (desenvolvimento) |
+- **Ferramentas**: | GitHub |  
 
 ## 4. Instalação e Execução  
 ### Pré-requisitos:  
-  
+- Python 3.8+ e Pip
+- Node.js e npm
 
 ### Passos:  
 1. Clone o repositório:  
    ```bash  
-   git clone https://github.com/seu-usuario/sistema-apoio-alunos.git  
+   git clone https://github.com/alleyrasaid/sistema-apoio-alunos.git
    cd sistema-apoio-alunos  
-Instale as dependências:
+   ```
+2. Instale as dependências:
+   ```bash
+   # Backend
+   cd backend
+   pip install -r requirements.txt
+   cd ..
+   
+   # Frontend
+   cd frontend
+   npm install
+   ```
+3. Execute a aplicação:
+   ```bash
+   # Terminal 1 (Backend)
+   cd backend
+   python manage.py runserver
+   ```
+   ```bash
+   # Terminal 2 (Frontend)
+   cd frontend
+   npm start
+   ```
+4. Acesse a aplicação no seu navegador: `http://localhost:3000`
+   
+### Docker (Opcional)
+```bash
+docker-compose up --build
+```
 
-bash
-# Backend  
-pip install -r requirements.txt  
+## 5. Acesso Online
+🔗 Link de produção: [Em desenvolvimento]
 
-# Frontend  
-cd frontend  
-npm install  
-Execute:
+## 6. Funcionalidades
+### ✅ Funcionalidades Implementadas:
+- **Cadastro de Disciplinas**
+  - Adicionar novas disciplinas com nome, horário e professor
+- **Cadastro de Tarefas**  
+  - Criar tarefas vinculadas a disciplinas
+  - Definir título, descrição, data de entrega e status
+- **Visualização de Tarefas**
+  - Listar todas as tarefas em ordem cronológica
+  - Visualizar detalhes completos de cada tarefa
+- **Filtros Avançados**
+  - Filtrar por disciplina específica
+  - Filtrar por data de entrega
+  - Filtrar por status (concluída/pendente)
+- **Modificação de Tarefas**
+  - Editar informações das tarefas existentes
+  - Excluir tarefas quando necessário
+- **Marcar Tarefas como Concluídas**
+  - Alterar status para concluído
+  - Visualização diferenciada para tarefas finalizadas
 
-bash
-# Terminal 1 (Backend)  
-  
+## 7. Uso / Exemplos
+### Cadastro de Disciplina:
+1. Acesse a seção "Disciplinas" no menu.
+2. Clique em "Nova Disciplina".
+3. Preencha o nome, professor e horário.
+4. Clique em "Salvar".
 
-# Terminal 2 (Frontend)  
+## 8. Estrutura do Projeto  
+```bash
+sistema-apoio-alunos/
+├── backend/                 # Django API
+│   ├── saa/                # App principal
+│   │   ├── models.py       # Modelos Disciplina, Tarefa
+│   │   ├── views.py        # Views da API
+│   │   └── serializers.py  # Serializers Django REST
+│   ├── manage.py
+│   └── requirements.txt
+├── frontend/                # React App
+│   ├── src/
+│   │   ├── components/     # Componentes React
+│   │   ├── services/       # API calls
+│   │   └── styles/         # Estilos CSS
+│   ├── package.json
+│   └── public/
+├── docs/                   # Documentação
+└── README.md
+```
 
+8. Documentação
+Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
 
-Docker (opcional):
-bash
-docker-compose up --build  
-#5. Acesse Online
-🔗 Link de produção: https://saa-sistema.herokuapp.com (exemplo)
-
-6. Funcionalidades
-Funcionalidade	Status
-Cadastro de Disciplinas	
-Cadastro de Tarefas	
-Visualização de Tarefas	
-Filtros (Data/Disciplina)	
-Modificação de Tarefas	
-Lembretes por E-mail	
-Calendário Acadêmico	
-7. Uso/Exemplos
-Cadastro de Disciplina:
-Acesse "Disciplinas" → "Nova"
-
-Preencha:
-
-Nome: "Engenharia de Software"
-
-Horário: "Segunda 14h-16h"
-
-Clique em "Salvar"
-
-Visualização de Tarefas:
+Diagramas UML: https://github.com/alleyrasaid/sistema-apoio-alunos/tree/main/docs/Diagramas
 
 
-8. Arquitetura do Projeto
-# Documentação  
-Diagramas:
-Casos de Uso
-
-Diagrama de Classes:
+>>>>>>> 54c21946fb34f93fdf6de243c5e3721a3a250d82
