@@ -63,7 +63,8 @@ Filtros (Data/Disciplina)	✅ Concluído
 Modificação de Tarefas	✅ Concluído
 Marcar tarefas como concluídas	✅ Concluído
 
-## 6. Estrutura do Projeto
+## 6. Estrutura do Projeto  
+```bash
 sistema-apoio-alunos/
 ├── backend/                 # Django API
 │   ├── saa/                # App principal
@@ -81,7 +82,11 @@ sistema-apoio-alunos/
 │   └── public/
 ├── docs/                   # Documentação
 └── README.md
-## 7. Documentação
+```
+
+8. Documentação
 Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
 
 Diagramas UML: Link para pasta de documentação
+
+
