@@ -51,19 +51,35 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
    npm start  
 4. Acesse: http://localhost:3000
    
-6. Acesse Online
+5. Acesse Online
 🔗 Link de produção: [Em desenvolvimento]
 
 ## 5. Funcionalidades
-Funcionalidade	Status
-Cadastro de Disciplinas	✅ Concluído
-Cadastro de Tarefas	✅ Concluído
-Visualização de Tarefas	✅ Concluído
-Filtros (Data/Disciplina)	✅ Concluído
-Modificação de Tarefas	✅ Concluído
-Marcar tarefas como concluídas	✅ Concluído
+### ✅ Funcionalidades Implementadas:
+- **Cadastro de Disciplinas**
+  - Adicionar novas disciplinas com nome, horário e professor
+- **Cadastro de Tarefas**  
+  - Criar tarefas vinculadas a disciplinas
+  - Definir título, descrição, data de entrega e status
+- **Visualização de Tarefas**
+  - Listar todas as tarefas em ordem cronológica
+  - Visualizar detalhes completos de cada tarefa
+- **Filtros Avançados**
+  - Filtrar por disciplina específica
+  - Filtrar por data de entrega
+  - Filtrar por status (concluída/pendente)
+- **Modificação de Tarefas**
+  - Editar informações das tarefas existentes
+  - Excluir tarefas quando necessário
+- **Marcar Tarefas como Concluídas**
+  - Alterar status para concluído
+  - Visualização diferenciada para tarefas finalizadas
 
-## 6. Estrutura do Projeto  
+## 6. Uso / Exemplos
+Como usar a aplicação (prints de tela ajudam muito).
+Exemplos de entrada e saída (dados ou informações).
+
+## 7. Estrutura do Projeto  
 ```bash
 sistema-apoio-alunos/
 ├── backend/                 # Django API
