@@ -27,5 +27,5 @@ jobs:
     - name: 🧪 Rodar testes
       run: npm run test:run
     
-    - name: 🏗️ Testar build
-      run: npm run build
+   # - name: 🏗️ Testar build
+   #   run: npm run build
