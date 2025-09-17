@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tarefa - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="home-body">
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/imagelogo.png" alt="Logotipo">
+        </div>
+        <nav class="button-group">
+            <a href="tarefas.html" class="nav-btn active">Minhas Tarefas</a>
+            <a href="disciplinas.html" class="nav-btn">Minhas Disciplinas</a>
+            <a href="#" id="logout-btn" class="nav-btn">Sair</a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <h1>Adicionar Nova Tarefa</h1>
+
+        <form class="disciplina-form" id="add-tarefa-form">
+            <div class="form-group">
+                <label for="tarefa-descricao">Descrição da Tarefa (Obrigatório)</label>
+                <input type="text" id="tarefa-descricao" placeholder="Ex: Resolver lista de exercícios" required>
+            </div>
+            <div class="form-group">
+                <label for="tarefa-disciplina">Disciplina</label>
+                <select id="tarefa-disciplina" required>
+                    <option value="" disabled selected>Carregando disciplinas...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tarefa-data">Data de Entrega</label>
+                <input type="date" id="tarefa-data">
+            </div>
+            <button type="submit" class="btn-login">Salvar Tarefa</button>
+        </form>
+    </main>
+    <img src="assets/image9.png" alt="Ilustração" class="home-illustration">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/add-tarefa.js"></script>
+</body>
+</html>

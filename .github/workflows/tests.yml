@@ -1,31 +1,31 @@
-name: 🧪 Testes Automatizados
+name: ? Testes Unit�rios
 
 on:
   push:
-    branches: ['**']          # 👈 Todas as branches
+    branches: ['**']
   pull_request:
-    branches: ['**']          # 👈 Todos os PRs
+    branches: ['**']
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
-    name: ✅ Rodar Testes
-    
+    name: ?? Rodar Testes Unit�rios
+
     steps:
-    - name: 📥 Baixar código
+    - name: ?? Baixar c�digo
       uses: actions/checkout@v4
-    
-    - name: 📦 Instalar Node.js
+
+    - name: ?? Instalar Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18.x'
         cache: 'npm'
-    
-    - name: 🧩 Instalar dependências
+
+    - name: ?? Instalar depend�ncias
       run: npm ci
-    
-    - name: 🧪 Rodar testes
+
+    - name: ?? Executar testes unit�rios
       run: npm run test:run
-    
-   # - name: 🏗️ Testar build
-   #   run: npm run build
+
+    - name: ?? Gerar coverage report
+      run: npm run coverage

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/transitions.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <header class="login-header">
+                <div class="logo">
+                    <img src="assets/imagelogo.png" alt="Logotipo do Sistema de Apoio a Alunos">
+                </div>
+                <p class="signup-link">
+                    Já tem conta? <a href="index.html">Clique aqui</a>
+                </p>
+            </header>
+
+            <main class="login-main">
+                <h1>Criar Conta</h1>
+                <form id="signup-form">
+                    <div class="form-field">
+                        <label for="username">Usuário</label>
+                        <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="exemplo.email@gmail.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Senha</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="digite 8 ou mais caracteres" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="confirm-password">Confirmar senha</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" placeholder="digite 8 ou mais caracteres" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-login">Cadastrar</button>
+                </form>
+                </main>
+        </div>
+        <div class="illustration-section">
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>
