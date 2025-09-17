@@ -2,9 +2,9 @@ name: 🧪 Testes Automatizados
 
 on:
   push:
-    branches: [main]
+    branches: ['**']          # 👈 Todas as branches
   pull_request:
-    branches: [main]
+    branches: ['**']          # 👈 Todos os PRs
 
 jobs:
   test:
