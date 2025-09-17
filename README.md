@@ -117,6 +117,3 @@ sistema-apoio-alunos/
 Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
 
 Diagramas UML: https://github.com/alleyrasaid/sistema-apoio-alunos/tree/main/docs/Diagramas
-
-
->>>>>>> 54c21946fb34f93fdf6de243c5e3721a3a250d82
