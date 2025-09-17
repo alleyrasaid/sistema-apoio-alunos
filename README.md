@@ -8,16 +8,12 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 ## 2. Equipe  
 | Matrícula      | Nome                 | Função               |  
 |----------------|----------------------|----------------------|  
-| 2023007113     | Saymon Davidson Lima |     |  
-| 2023031816     | Adriana Sawaki       |        |  
-| 2023031825     | Aryella Dias         |  |  
-| 2016005763     | Harley Milhomes      |   |  
-| 2020004584     | João Pedro Saraiva   |       | 
 | 2023007113     | Saymon Miranda | Front-end Developer  |  
 | 2020004584     | João Pedro Saraiva   | Back End Developer   | 
 | 2023031825     | Aryella Dias         | Tester e Gestão de Tarefas |  
 | 2016005763     | Marilia Santos       | Gestao de Tarefas |  
 | 2023031816     | Adriana Sawaki       | Tester e Gestão de Tarefas |
+| 2016005763     | Harley Milhomes      | Front-end Developer  |
 
 ## 3. Tecnologias Utilizadas  
 - **Linguagens**:   
