@@ -31,27 +31,27 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
    git clone https://github.com/alleyrasaid/sistema-apoio-alunos.git  
    cd sistema-apoio-alunos  
 2. Instale as dependências:
-   # Backend  
-pip install -r requirements.txt  
-
-# Configure o banco de dados
-python manage.py migrate
-
-# Crie um superusuário (opcional)
-python manage.py createsuperuser
-
-# Frontend  
-cd frontend  
-npm install  
+   ```bash
+   # Backend
+   pip install -r requirements.txt
+   # Configure o banco de dados
+   python manage.py migrate
+   # Crie um superusuário (opcional)
+   python manage.py createsuperuser
+   # Frontend
+   cd frontend
+   npm install  
 3. Execute:
-# Terminal 1 (Backend)  
-python manage.py runserver  
+   ```bash
+   # Terminal 1 (Backend)
+   python manage.py runserver
 
-# Terminal 2 (Frontend)  
-cd frontend  
-npm start  
+   # Terminal 2 (Frontend)
+   cd frontend
+   npm start  
 4. Acesse: http://localhost:3000
-5. Acesse Online
+   
+6. Acesse Online
 🔗 Link de produção: [Em desenvolvimento]
 
 ## 5. Funcionalidades
@@ -62,9 +62,7 @@ Visualização de Tarefas	✅ Concluído
 Filtros (Data/Disciplina)	✅ Concluído
 Modificação de Tarefas	✅ Concluído
 Marcar tarefas como concluídas	✅ Concluído
-Lembretes por E-mail	⏳ Em andamento
-Calendário Acadêmico	⏳ Em andamento
-Temas claro/escuro	⏳ Em andamento
+
 ## 6. Estrutura do Projeto
 sistema-apoio-alunos/
 ├── backend/                 # Django API
