@@ -1,0 +1,58 @@
+# Nome do nosso fluxo de automação
+name: Testes Automatizados do Projeto
+
+# Gatilhos: Quando o robô deve rodar?
+on:
+  # A cada 'push' para a branch 'main'
+  push:
+    branches: [ main ]
+  # A cada 'Pull Request' aberto para a branch 'main'
+  pull_request:
+    branches: [ main ]
+
+# Trabalhos (Jobs): O que o robô deve fazer?
+jobs:
+  # Primeiro trabalho: testar o front-end
+  test_frontend:
+    name: Testar Front-end
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar o ambiente Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 3. Instalar dependências do Front-end
+        run: npm install
+
+      - name: 4. Rodar testes do Front-end (se o script 'test' existir)
+        # O '--if-present' é um truque para não dar erro se o script 'test' não existir no package.json
+        run: npm run test --if-present
+
+  # Segundo trabalho: testar o back-end
+  test_backend:
+    name: Testar Back-end
+    # 'needs' garante que este job só rodará se o 'test_frontend' passar
+    needs: test_frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar o ambiente Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 3. Instalar dependências do Back-end
+        # 'working-directory' diz ao robô para entrar na pasta 'functions' antes de rodar o comando
+        run: npm install
+        working-directory: ./functions
+
+      - name: 4. Rodar verificação de qualidade (Lint) no Back-end
+        # O script 'lint' é um padrão para verificar erros no código do Firebase
+        run: npm run lint
+        working-directory: ./functions
