@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Disciplinas - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="home-body">
+    
+    <div id="header-placeholder"></div>
+
+    <main class="home-main">
+        <h1 id="user-greeting">Minhas Disciplinas</h1>
+
+        <div class="table-container">
+            <div class="table-title">Disciplinas</div>
+            <table class="disciplinas-table">
+                <thead>
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Professor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-disciplinas-tbody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div id="alerts-container" class="alerts-container" style="display: none;">
+            <div class="alert-box">
+                <p>Você não possui disciplinas cadastradas. Que tal adicionar uma?</p>
+            </div>
+        </div>
+
+        <a href="add-disciplina.html" class="btn-action">+ Adicionar Nova Disciplina</a>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/disciplinas.js"></script>
+    <script>
+        renderHeader('disciplinas'); 
+    </script>
+</body>
+</html>

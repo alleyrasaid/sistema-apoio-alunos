@@ -6,82 +6,79 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 **Problema resolvido**: Auxilia estudantes na gestão do tempo e reduz o esquecimento de compromissos acadêmicos através de lembretes e interface intuitiva.  
 
 ## 2. Equipe  
-| Matrícula      | Nome                 | Função |  
-|----------------|----------------------|--------|  
-| 2023007113     | Saymon Davidson Lima |        |  
+| Matrícula      | Nome                 | Função               |  
+|----------------|----------------------|----------------------|  
+| 2023007113     | Saymon Davidson Lima |     |  
 | 2023031816     | Adriana Sawaki       |        |  
-| 2023031825     | Aryella Dias         |        |  
-| 2016005763     | Harley Milhomes      |        |  
-| 2020004584     | João Pedro Saraiva   |        |  
-| 2021012301     | Marília Santos       |        |  
-
+| 2023031825     | Aryella Dias         |  |  
+| 2016005763     | Harley Milhomes      |   |  
+| 2020004584     | João Pedro Saraiva   |       | 
 ## 3. Tecnologias Utilizadas  
-- **Linguagens**: Python, JavaScript, HTML5, CSS3  
-- **Frameworks**: Django, React  
-- **Banco de Dados**: SQLite (dev), PostgreSQL (prod)  
-- **Ferramentas**: GitHub, Trello, Figma, Draw.io  
+- **Linguagens**:   
+- **Frameworks**:   
+- **Banco de Dados**:   
+- **Ferramentas**: GitHub  
 
 ## 4. Instalação e Execução  
 ### Pré-requisitos:  
-- Python 3.8+, Node.js, Git  
+  
 
 ### Passos:  
 1. Clone o repositório:  
    ```bash  
-   git clone https://github.com/alleyrasaid/sistema-apoio-alunos.git  
+   git clone https://github.com/seu-usuario/sistema-apoio-alunos.git  
    cd sistema-apoio-alunos  
-2. Instale as dependências:
-   ```bash
-   # Backend
-   pip install -r requirements.txt
-   # Configure o banco de dados
-   python manage.py migrate
-   # Crie um superusuário (opcional)
-   python manage.py createsuperuser
-   # Frontend
-   cd frontend
-   npm install  
-3. Execute:
-   ```bash
-   # Terminal 1 (Backend)
-   python manage.py runserver
+Instale as dependências:
 
-   # Terminal 2 (Frontend)
-   cd frontend
-   npm start  
-4. Acesse: http://localhost:3000
-   
-6. Acesse Online
-🔗 Link de produção: [Em desenvolvimento]
+bash
+# Backend  
+pip install -r requirements.txt  
 
-## 5. Funcionalidades
+# Frontend  
+cd frontend  
+npm install  
+Execute:
+
+bash
+# Terminal 1 (Backend)  
+  
+
+# Terminal 2 (Frontend)  
+
+
+Docker (opcional):
+bash
+docker-compose up --build  
+#5. Acesse Online
+🔗 Link de produção: https://saa-sistema.herokuapp.com (exemplo)
+
+6. Funcionalidades
 Funcionalidade	Status
-Cadastro de Disciplinas	✅ Concluído
-Cadastro de Tarefas	✅ Concluído
-Visualização de Tarefas	✅ Concluído
-Filtros (Data/Disciplina)	✅ Concluído
-Modificação de Tarefas	✅ Concluído
-Marcar tarefas como concluídas	✅ Concluído
+Cadastro de Disciplinas	
+Cadastro de Tarefas	
+Visualização de Tarefas	
+Filtros (Data/Disciplina)	
+Modificação de Tarefas	
+Lembretes por E-mail	
+Calendário Acadêmico	
+7. Uso/Exemplos
+Cadastro de Disciplina:
+Acesse "Disciplinas" → "Nova"
 
-## 6. Estrutura do Projeto
-sistema-apoio-alunos/
-├── backend/                 # Django API
-│   ├── saa/                # App principal
-│   │   ├── models.py       # Modelos Disciplina, Tarefa
-│   │   ├── views.py        # Views da API
-│   │   └── serializers.py  # Serializers Django REST
-│   ├── manage.py
-│   └── requirements.txt
-├── frontend/                # React App
-│   ├── src/
-│   │   ├── components/     # Componentes React
-│   │   ├── services/       # API calls
-│   │   └── styles/         # Estilos CSS
-│   ├── package.json
-│   └── public/
-├── docs/                   # Documentação
-└── README.md
-## 7. Documentação
-Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
+Preencha:
 
-Diagramas UML: Link para pasta de documentação
+Nome: "Engenharia de Software"
+
+Horário: "Segunda 14h-16h"
+
+Clique em "Salvar"
+
+Visualização de Tarefas:
+
+
+8. Arquitetura do Projeto
+# Documentação  
+Diagramas:
+Casos de Uso
+
+Diagrama de Classes:
