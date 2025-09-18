@@ -18,13 +18,16 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 
 | 2023031816     | Adriana Sawaki       | Tester e Gestão de Tarefas |
 
-| 2016005763     | Harley Milhomes      | Front-end Developer |
-
 ## 3. Tecnologias Utilizadas  
-- **Linguagens**:   
-- ***Front End**: | HTML, CSS, Vanilla |
-- **Back End**: | Firebase (desenvolvimento) |
-- **Ferramentas**: | GitHub |  
+- **Framework**: | Vite |
+- **Banco de Dados**:   
+- ***Front End**: |HTML5, CSS3, JavaScript (Vanilla) |
+- **Back End**: | Firebase (Cloud Functions, Firestore Database) |
+- **Ferramentas**: | GitHub |
+- **Testes**: | Playwright (Para teste end-to-end) |  
+- **Automação**: | CI/CD Github Actions |
+- **Controle da versão**: | Git & Github |
+
 
 ## 4. Instalação e Execução  
 ### Pré-requisitos:  
@@ -59,7 +62,8 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
    cd frontend
    npm start
    ```
-4. Acesse a aplicação no seu navegador: `http://localhost:3000`
+4. Acesse a aplicação no seu navegador: https://sistema-de-apoio-a-alunos.web.app/
+ `http://localhost:3000`
    
 ### Docker (Opcional)
 ```bash
@@ -67,7 +71,7 @@ docker-compose up --build
 ```
 
 ## 5. Acesso Online
-🔗 Link de produção: [Em desenvolvimento]
+🔗 Link de produção: https://sistema-de-apoio-a-alunos.web.app/
 
 ## 6. Funcionalidades
 ### ✅ Funcionalidades Implementadas:
@@ -136,6 +140,17 @@ sistema-apoio-alunos/
 ├── docs/                   # Documentação
 └── README.md
 ```
+
+sistema-apoio-alunos/
+├── .github/              # Configurações do GitHub (CI/CD Workflows)
+├── functions/            # Código do Back-end (Firebase Cloud Functions)
+├── public/               # Arquivos estáticos (imagens, ícones)
+├── src/                  # Código-fonte do Front-end
+│   ├── components/       # Componentes reutilizáveis da interface
+│   └── ...
+├── tests/                # Arquivos de teste do Playwright
+│   └── e2e/              # Testes de ponta-a-ponta
+└── ...                   # Arquivos de configuração (vite, playwright, package.json)
 
 8. Documentação
 Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
