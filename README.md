@@ -7,9 +7,11 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 
 ## 2. Equipe  
 | Matrícula      | Nome                 | Função               |  
+
 | 2020004584     | João Pedro Saraiva   | Back End Developer, Front-end Developer, Tester e Gestão de Tarefas |
 
-| 2023007113     | Saymon Miranda | Front-end Developer, Tester e Gestão de Tarefas  |  
+| 2023007113     | Saymon Miranda | Front-end Developer, Tester e Gestão de Tarefas  |
+
 | 2023031825     | Aryella Dias         | Tester e Gestão de Tarefas |
 
 | 2016005763     | Marilia Santos       | Tester e Gestão de Tarefas |
