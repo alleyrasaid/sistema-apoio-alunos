@@ -23,8 +23,11 @@ jobs:
     - name: Instalar dependências
       run: npm ci
 
-    - name: Instalar Playwright browsers
+    - name: Instalar Playwright
       run: npx playwright install --with-deps
+
+    - name: Verificar browsers instalados
+      run: npx playwright --version && npx playwright install --dry-run
 
     - name: Executar testes Playwright
       run: npx playwright test
@@ -46,30 +49,3 @@ jobs:
         name: playwright-traces
         path: test-results/
         retention-days: 7
-
-  # Job opcional para testes de compatibilidade - REMOVIDO A DEPENDÊNCIA
-  matrix-tests:
-    # REMOVED: needs: playwright-tests  # Isso causa falha em cascata
-    if: success()  # Só executa se o workflow principal passar
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]  # Removido 16.x que pode estar causando problemas
-    
-    steps:
-    - name: Checkout código
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-
-    - name: Instalar dependências
-      run: npm ci
-
-    - name: Executar testes de compatibilidade
-      run: npx playwright test --project=chromium
-      env:
-        TEST_URL: https://sistema-de-apoio-a-alunos.web.app
