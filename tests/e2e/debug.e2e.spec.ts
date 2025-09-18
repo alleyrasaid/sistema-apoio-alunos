@@ -1,27 +1,33 @@
 import { test, expect } from '@playwright/test';
 
-test('debug - ver conteúdo real da página', async ({ page }) => {
+test('debug - ver conteÃºdo real da pÃ¡gina', async ({ page }) => {
   await page.goto('https://sistema-de-apoio-a-alunos.web.app/');
-  
-  // Capturar todo o HTML da página
+
+  // Capturar todo o HTML da pÃ¡gina
   const htmlContent = await page.content();
-  console.log('HTML DA PÁGINA:', htmlContent);
-  
-  // Capturar todos os textos visíveis
+  console.log('HTML DA PÃGINA:', htmlContent);
+
+  // Capturar todos os textos visÃ­veis
   const allTexts = await page.evaluate(() => {
     return Array.from(document.body.querySelectorAll('*'))
       .filter(element => element.children.length === 0 && element.textContent.trim() !== '')
       .map(element => element.textContent.trim());
   });
-  
+
   console.log('TEXTOS ENCONTRADOS:', allTexts);
-  
-  // Capturar todos os botões
-  const buttons = await page.$$eval('button', buttons => 
+
+  // Capturar todos os botÃµes
+  const buttons = await page.$$eval('button', buttons =>
     buttons.map(btn => ({ text: btn.textContent.trim(), id: btn.id, class: btn.className }))
   );
-  console.log('BOTÕES:', buttons);
-  
+  console.log('BOTÃ•ES:', buttons);
+
+  // Capturar todos os inputs
+  const inputs = await page.$$eval('input', inputs =>
+    inputs.map(input => ({ type: input.type, name: input.name, placeholder: input.placeholder }))
+  );
+  console.log('INPUTS:', inputs);
+
   // Esperar para vermos o console
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(3000);
 });
