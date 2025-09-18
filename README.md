@@ -74,10 +74,6 @@ docker-compose up --build
 - **Visualização de Tarefas**
   - Listar todas as tarefas em ordem cronológica
   - Visualizar detalhes completos de cada tarefa
-- **Filtros Avançados**
-  - Filtrar por disciplina específica
-  - Filtrar por data de entrega
-  - Filtrar por status (concluída/pendente)
 - **Modificação de Tarefas**
   - Editar informações das tarefas existentes
   - Excluir tarefas quando necessário
@@ -88,9 +84,32 @@ docker-compose up --build
 ## 7. Uso / Exemplos
 ### Cadastro de Disciplina:
 1. Acesse a seção "Disciplinas" no menu.
-2. Clique em "Nova Disciplina".
-3. Preencha o nome, professor e horário.
+2. Clique em "Adicionar Nova Disciplina".
+3. Preencha o nome e a disciplina do professor.
 4. Clique em "Salvar".
+
+### Visualização de Disciplinas:
+### Após cadastrar disciplina: 
+1. Acesse a seção de "Disciplinas" no menu. 
+2. Observe a lista de "Disciplinas Cadastradas"
+3. Clique no ícone de "editar" (um lápis) para editar ou na lixeira para excluir
+
+### Cadastro de Tarefa:
+### Após cadastrar disciplina:
+1. Acesse a seção "Minhas Tarefas" no menu.
+2. Clique em "Adicionar Nova Tarefa"
+3. Preencha "Título da Tarefa", "Disciplina"
+4. Selecione a data de entrega
+5. Clique em "Salvar"
+
+### Visualização de Tarefas
+1. Acesse a seção "Minhas Tarefas" no menu.
+2. Em caso de tarefa concluída marcar "check", caso contrário deixar desmarcado.
+3. Clicar no ícone de "editar" para fazer edicação de "Título da Tarefa", "Disciplina" e Data de Entrega se necessário
+4. Clique na lixeira, caso queira excluir a tarefa
+
+
+
 
 ## 8. Estrutura do Projeto  
 ```bash
