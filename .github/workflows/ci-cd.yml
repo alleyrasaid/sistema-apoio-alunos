@@ -36,7 +36,9 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
+        # REMOVA O CACHE TEMPORARIAMENTE - COMENTE ESTAS LINHAS:
+        # cache: 'npm'
+        # cache-dependency-path: 'package-lock.json'
 
     - name: Install dependencies
       run: npm ci
@@ -96,7 +98,6 @@ jobs:
     - name: Deploy to development
       run: |
         echo "Deploying development version ${{ github.sha }}"
-        # Adicione seus comandos de deploy aqui
 
   deploy-prod:
     runs-on: ubuntu-latest
@@ -110,4 +111,3 @@ jobs:
     - name: Deploy to production
       run: |
         echo "Deploying production version ${{ github.sha }}"
-        # Adicione seus comandos de deploy aqui
