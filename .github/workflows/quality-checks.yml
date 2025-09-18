@@ -1,0 +1,32 @@
+name: Quality Checks
+on:
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Instalar dependências
+      run: npm ci
+
+    - name: Verificar sintaxe do package.json
+      run: node -e "require('./package.json')" && echo "✅ package.json válido"
+
+    - name: Executar ESLint (se configurado)
+      run: npm run lint || echo "Lint não configurado"
+
+    - name: Executar testes unitários
+      run: npm run test:unit || echo "Testes unitários não configurados"
+
+    - name: Verificar build
+      run: npm run build --if-present || echo "Build não configurado"

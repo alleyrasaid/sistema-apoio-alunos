@@ -1,0 +1,24 @@
+/* --- Efeitos de Transição de Página --- */
+
+/* Animação de entrada (fade-in) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animação de saída (fade-out) */
+@keyframes fadeOutBody {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Estilo inicial do corpo da página */
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Classe para ativar a animação de saída */
+body.body-fade-out {
+    animation: fadeOutBody 0.5s forwards;
+}

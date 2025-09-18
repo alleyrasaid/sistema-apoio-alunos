@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Disciplina - Sistema de Apoio a Alunos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="home-body">
+    <header class="main-header">
+        <div class="logo">
+            <img src="assets/imagelogo.png" alt="Logotipo">
+        </div>
+        <nav class="button-group">
+            <a href="home.html" class="nav-btn">Minhas Tarefas</a>
+            <a href="disciplinas.html" class="nav-btn active">Minhas Disciplinas</a>
+            <a href="#" id="logout-btn" class="nav-btn">Sair</a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <h1>Editar Disciplina</h1>
+
+        <form class="disciplina-form" id="edit-disciplina-form">
+            <div class="form-group">
+                <label for="disciplina-nome">Nome da Disciplina</label>
+                <input type="text" id="disciplina-nome" placeholder="Carregando..." required>
+            </div>
+            <div class="form-group">
+                <label for="professor-nome">Nome do Professor (opcional)</label>
+                <input type="text" id="professor-nome" placeholder="Carregando...">
+            </div>
+            <button type="submit" class="btn-login">Salvar Alterações</button>
+        </form>
+    </main>
+    <img src="assets/image7.png" alt="Ilustração" class="home-illustration">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/editar-disciplina.js"></script>
+</body>
+</html>

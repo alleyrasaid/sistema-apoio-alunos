@@ -1,0 +1,40 @@
+name: Deploy to Firebase
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - '*.json'
+      - '*.js'
+      - '*.html'
+      - '*.css'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Instalar dependências
+      run: npm ci
+
+    - name: Build da aplicação
+      run: npm run build
+
+    - name: Deploy no Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+        channelId: live
+        projectId: sistema-de-apoio-a-alunos
+      env:
+        FIREBASE_CLI_PREVIEWS: hostingchannels
