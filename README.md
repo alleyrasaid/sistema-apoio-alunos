@@ -125,14 +125,14 @@ docker-compose up --build
 ## 8. Estrutura do Projeto  
 ```bash
 sistema-apoio-alunos/
-├── backend/                 # Django API
+├── backend/                 # 
 │   ├── saa/                # App principal
 │   │   ├── models.py       # Modelos Disciplina, Tarefa
 │   │   ├── views.py        # Views da API
-│   │   └── serializers.py  # Serializers Django REST
+│   │   └── serializers.py  # Serializers REST
 │   ├── manage.py
 │   └── requirements.txt
-├── frontend/                # React App
+├── frontend/                # 
 │   ├── src/
 │   │   ├── components/     # Componentes React
 │   │   ├── services/       # API calls
@@ -144,6 +144,7 @@ sistema-apoio-alunos/
 ```
 
 sistema-apoio-alunos/
+```bash
 ├── .github/              # Configurações do GitHub (CI/CD Workflows)
 ├── functions/            # Código do Back-end (Firebase Cloud Functions)
 ├── public/               # Arquivos estáticos (imagens, ícones)
@@ -153,7 +154,7 @@ sistema-apoio-alunos/
 ├── tests/                # Arquivos de teste do Playwright
 │   └── e2e/              # Testes de ponta-a-ponta
 └── ...                   # Arquivos de configuração (vite, playwright, package.json)
-
+```
 8. Documentação
 Trello: https://trello.com/b/nXrhngG2/sistema-de-apoio-aos-alunos
 
