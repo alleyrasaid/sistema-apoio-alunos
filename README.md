@@ -12,6 +12,10 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 
 | 2023007113     | Saymon Miranda | Front-end Developer, Tester e Gestão de Tarefas  |
 
+| 2016005763     | Marilia Santos       | Front-end Developer, Tester e Gestão de Tarefas |
+
+| 2016005763     | Harley Milhomes      | Front-end Developer |
+
 | 2023031825     | Aryella Dias         | Tester e Gestão de Tarefas |
 
 | 2016005763     | Marilia Santos       | Tester e Gestão de Tarefas |
