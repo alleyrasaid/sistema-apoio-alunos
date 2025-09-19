@@ -18,8 +18,6 @@ O **Sistema de Apoio a Alunos (SAA)** é uma plataforma web para organização a
 
 | 2023031825     | Aryella Dias         | Tester e Gestão de Tarefas |
 
-| 2016005763     | Marilia Santos       | Tester e Gestão de Tarefas |
-
 | 2023031816     | Adriana Sawaki       | Tester e Gestão de Tarefas |
 
 ## 3. Tecnologias Utilizadas  
